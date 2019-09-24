@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
+import {Tab, Menu, Icon} from 'semantic-ui-react'
 
-export function Header(props) {
+export default function Header(props) {
 
     return(
         <>
-            <p>Hello World</p>
+            <Menu>
+                <Menu.Item as ={Link} to="/home">Home</Menu.Item>
+            </Menu>
         </>
     )
 }
+
+
+

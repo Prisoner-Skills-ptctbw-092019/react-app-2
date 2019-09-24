@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import { Header } from './Components/Header'
+import Header from './Components/Header';
+import Test from './Components/test';
+import Prisoner from './Components/prisoner';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <Route exact path ='/' component = {Header}/>
-      <Route path ='/:id' component = {Prisoner}/>
-      <Route path ='/adminPanel' component = {AdminPanel}/> */}
+      <Prisoner />
+      <Test/>
+      {/* <header className="App-header">
+        <p>home</p>
+        <Test />
+      </header> */}
     </div>
   );
 }
