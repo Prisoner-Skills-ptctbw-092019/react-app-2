@@ -1,20 +1,18 @@
 import React from 'react';
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route } from "react-router-dom";
 import Header from './Components/Header';
-import Test from './Components/test';
-import Prisoner from './Components/prisoner';
+import PrisonsList from './Components/prisons';
+import PrisonersList from './Components/prisoner';
+import WelcomePage from './Components/welcomePage'
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Prisoner />
-      <Test/>
-      {/* <header className="App-header">
-        <p>home</p>
-        <Test />
-      </header> */}
+      <Route exact path={`/`} component={WelcomePage} />
+      <Route path={`/prisons`} component={PrisonsList} />
+      <Route path={`/prisoners`} component={PrisonersList} />
     </div>
   );
 }

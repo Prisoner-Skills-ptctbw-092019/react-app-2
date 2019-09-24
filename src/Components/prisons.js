@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import JailCard from './testCard'
+import JailCard from './prisonCard'
 import { CardGroup } from "semantic-ui-react";
 
-export default function Test(props) {
+export default function PrisonsList(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // const id = props.match.params.id;
-
+    
     axios
       .get(`https://lambdaprisonerskills.herokuapp.com/prisons/`)
       .then(response => {
