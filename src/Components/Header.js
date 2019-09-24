@@ -7,7 +7,7 @@ export default function Header(props) {
     return(
         <>
             <Menu>
-                <Menu.Item as ={Link} to="/home">Home</Menu.Item>
+                <Menu.Item as ={Link} to="/">Home</Menu.Item>
                 <Menu.Item as ={Link} to="/prisoners">Prisoners</Menu.Item>
                 <Menu.Item as ={Link} to="/prisons">Prisons</Menu.Item>
             </Menu>
