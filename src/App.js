@@ -8,13 +8,12 @@ import Prisoner from './Components/prisoner';
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Prisoner />
-      <Test/>
-      {/* <header className="App-header">
+      {/* <Prisoner />
+      <Test/> */}
+      <header className="App-header">
         <p>home</p>
         <Test />
-      </header> */}
+      </header>
     </div>
   );
 }

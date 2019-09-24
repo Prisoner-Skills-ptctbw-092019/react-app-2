@@ -1,5 +1,5 @@
 import PrisonerCard from './prisonerCard'
-import { CardGroup } from "semantic-ui-react";
+import { Card} from "semantic-ui-react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -21,7 +21,7 @@ export default function Prisoner(props) {
 
   return (
     <div className="prisoner-list">
-      <CardGroup centered>
+      <Card.Group centered>
       {data.map((item, index) => {
         return (
           <PrisonerCard
@@ -35,7 +35,7 @@ export default function Prisoner(props) {
           />
         );
       })}
-      </CardGroup>
+      </Card.Group>
     </div>
   );
 }
