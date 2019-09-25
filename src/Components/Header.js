@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
-import {Tab, Menu, Icon} from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 
 export default function Header(props) {
 
@@ -8,9 +8,10 @@ export default function Header(props) {
         <div className="header-bar">
             <h1>Prisoner Skills</h1>
             <Menu>
-                <Menu.Item as ={Link} to="/home">Home</Menu.Item>
-                <Menu.Item as ={Link} to="/home">Prisoners</Menu.Item>
-                <Menu.Item as ={Link} to="/home">Admin</Menu.Item>
+                <Menu.Item as ={Link} to="/">Home</Menu.Item>
+                <Menu.Item as ={Link} to="/prisons">Prisons</Menu.Item>
+                <Menu.Item as ={Link} to="/prisoners">Prisoners</Menu.Item>
+                <Menu.Item as ={Link} to="/admin">Admin</Menu.Item>
             </Menu>
         </div>
     )
