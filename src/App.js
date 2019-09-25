@@ -10,9 +10,11 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Route exact path={`/`} component={WelcomePage} />
-      <Route path={`/prisons`} component={PrisonsList} />
-      <Route path={`/prisoners`} component={PrisonersList} />
+      <Route exact path='/'/>
+      <Route exact path='/prisoners' component={PrisonersList}/>
+      <Route path='/prisons' component={PrisonsList}/>
+      <Route path='/prisoners/:id' component={PrisonersList}/>
+      <Route path='/admin' />
     </div>
   );
 }

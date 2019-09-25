@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+
+.header-bar {
+  padding: 25px 25px;
+}
