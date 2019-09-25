@@ -6,10 +6,19 @@ import axios from "axios";
 export default function Prisoner(props) {
   const [data, setData] = useState([]);
 
+  let prisoner1 = {
+    "name": "justin landry",
+    "skills": "cooking, coding",
+    "prisonID": "1",
+    "biography": "coder",
+    "DOB": "01-05-1988",
+    "releaseDate": "09-18-2019"
+  }
+
   useEffect(() => {
 
     axios
-      .get(`https://lambdaprisonerskills.herokuapp.com/prisons/1`)
+      .get(`https://lambdaprisonerskills.herokuapp.com/prisoners`)
       .then(response => {
         setData(response.data);
         console.log(response.data);

@@ -8,12 +8,9 @@ import Prisoner from './Components/prisoner';
 function App() {
   return (
     <div className="App">
-      {/* <Prisoner />
-      <Test/> */}
-      <header className="App-header">
-        <p>home</p>
-        <Test />
-      </header>
+      <Header/>
+      <Prisoner />
+      <Test/>
     </div>
   );
 }
