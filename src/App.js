@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import PrisonsList from './Components/prisons';
 import PrisonersList from './Components/prisoner';
 import WelcomePage from './Components/welcomePage'
+import Listener from './Components/listener';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route exact path={`/`} component={WelcomePage} />
       <Route path={`/prisons`} component={PrisonsList} />
       <Route path={`/prisoners`} component={PrisonersList} />
+      <Route path={`/listener`} component={Listener} />
     </div>
   );
 }
