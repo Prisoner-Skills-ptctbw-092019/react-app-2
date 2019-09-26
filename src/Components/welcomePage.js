@@ -1,15 +1,13 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
+import { Container, Header } from "semantic-ui-react";
 
 export default function WelcomePage() {
   return (
-    <Card className="Welcome-page">
-      <h1>Welcome</h1>
-      <h2>Lorem Ipsum</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </Card>
+    <Container className="Welcome-page" text>
+    <Header as='h2'>Welcome to InmateResume™</Header>
+      <p>Here at InmateResume™ we strive to provide former inmates with a seamless and stress free transition into the civilian workplace! 
+          Here, prospective employers can view inmates info and skills to find the best candidate for almost any job!
+      </p>
+    </Container>
   );
 }

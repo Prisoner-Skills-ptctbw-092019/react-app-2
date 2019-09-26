@@ -1,5 +1,5 @@
 import PrisonerCard from './prisonerCard'
-import { CardGroup } from "semantic-ui-react";
+import { Card} from "semantic-ui-react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -7,21 +7,37 @@ export default function PrisonersList(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-
-    axios
-      .get(`https://lambdaprisonerskills.herokuapp.com/prisons/1`)
-      .then(response => {
-        setData(response.data);
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
+    console.log(props);
+    if(props.match.params.id){
+      
+      axios
+        .get(`https://lambdaprisonerskills.herokuapp.com/prisons/${props.match.params.id}`)
+        .then(response => {
+          setData(response.data);
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+      console.log(props.match.params.id);
+    }
+    else {
+  
+      axios
+        .get(`https://lambdaprisonerskills.herokuapp.com/prisoners`)
+        .then(response => {
+          setData(response.data);
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  }, [props]);
 
   return (
     <div className="prisoner-list">
-      <CardGroup centered>
+      <Card.Group centered>
       {data.map((item, index) => {
         return (
           <PrisonerCard
@@ -35,7 +51,7 @@ export default function PrisonersList(props) {
           />
         );
       })}
-      </CardGroup>
+      </Card.Group>
     </div>
   );
 }
