@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import PrisonsList from './Components/prisons';
 import PrisonersList from './Components/prisoner';
 import WelcomePage from './Components/welcomePage'
+import PrisonerForm from './Components/Admins'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Route exact path='/prisoners' component={PrisonersList}/>
       <Route path='/prisons' component={PrisonsList}/>
       <Route path='/prisoners/:id' component={PrisonersList}/>
-      <Route path='/admin' />
+      <Route path='/admin' component={PrisonerForm}/>
     </div>
   );
 }
