@@ -6,15 +6,6 @@ import axios from "axios";
 export default function PrisonersList(props) {
   const [data, setData] = useState([]);
 
-  let prisoner1 = {
-    "name": "justin landry",
-    "skills": "cooking, coding",
-    "prisonID": "1",
-    "biography": "coder",
-    "DOB": "01-05-1988",
-    "releaseDate": "09-18-2019"
-  }
-
   useEffect(() => {
     console.log(props);
     if(props.match.params.id){
@@ -42,7 +33,7 @@ export default function PrisonersList(props) {
           console.error(error);
         });
     }
-  }, []);
+  }, [props]);
 
   return (
     <div className="prisoner-list">
