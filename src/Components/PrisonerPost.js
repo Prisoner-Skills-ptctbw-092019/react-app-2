@@ -6,6 +6,8 @@ import axios from 'axios'
 const PrisonerForm = ({ errors, touched }) => {
   return (
     <Form className='prisonerForm'>
+      <h1>Add Prisoner Form</h1>
+
       {touched.name && errors.name && <p className="error">{errors.name}</p>}
       <Field type="text" name="name" placeholder="Name" />
 
